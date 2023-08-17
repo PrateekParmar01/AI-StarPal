@@ -1,0 +1,31 @@
+BSYXLFAbJXuBEwd_v5Yz3w
+
+export DATABASE_URL="postgresql://ai-starpal:BSYXLFAbJXuBEwd_v5Yz3w@ai-starpal-5189.6xw.cockroachlabs.cloud:26257/Ai-StarPal?sslmode=verify-full"
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+model Widget {
+  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+}
+
+const { PrismaClient } = require("@prisma/client");
+
+const prisma = new PrismaClient();
+
+(async () => {
+  try {
+    console.log(await prisma.widget.create({ data: { } }));
+  } catch (err) {
+    console.error("error executing query:", err);
+  } finally {
+    prisma.$disconnect();
+  }
+})();
