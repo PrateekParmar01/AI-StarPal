@@ -16,9 +16,11 @@ interface NavbarProps {
   isPro: boolean;
 }
 
-export const Navbar = ({
+export const Navbar = (
+  {
   isPro
-}: NavbarProps) => {
+}: NavbarProps
+) => {
   const proModal = useProModal();
 
   return ( 

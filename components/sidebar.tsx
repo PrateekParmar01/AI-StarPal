@@ -11,18 +11,18 @@ interface SidebarProps {
 }
 
 export const Sidebar = (
-// {
-//   isPro
-// }: SidebarProps
+{
+  isPro
+}: SidebarProps
 ) => {
   const proModal = useProModal();
   const router = useRouter();
   const pathname = usePathname();
 
   const onNavigate = (url: string, pro: boolean) => {
-    // if (pro && !isPro) {
-    //   return proModal.onOpen();
-    // }
+    if (pro && !isPro) {
+      return proModal.onOpen();
+    }
 
     return router.push(url);
   }
