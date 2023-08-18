@@ -8,11 +8,7 @@ Welcome to Ai-StarPal, your ultimate platform for creating and interacting with 
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [API Routes](#api-routes)
-- [Authentication](#authentication)
-- [Subscription Plans](#subscription-plans)
-- [Free Tier](#free-tier)
-- [Contact Us](#contact-us)
+- [Deployment](#deploy-on-vercel)
 
 ## Features
 
